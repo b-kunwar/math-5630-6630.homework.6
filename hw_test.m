@@ -32,6 +32,10 @@ hw_assert(abs ( hw06_worker.p1(@f6_test,0, 1, 16, 3) - (1-cos(1))) < tol);
 hw_assert(abs ( hw06_worker.p1(@f7_test,0, 1, 16, 3) - (exp(1)-1)) < tol);
 hw_assert(abs ( hw06_worker.p1(@f8_test,0, 1, 16, 3) - pi/4) < tol);
 
+%% Test Problem 2.2
+% hw06.p2()
+%% 
+
 disp('Test p3, option 1')
 tol=1e-8;
 hw_assert(abs ( hw06_worker.p3(@f1_test,0, 1, 4, 1) - 1/3) < tol);
@@ -63,6 +67,9 @@ hw_assert(abs ( hw06_worker.p3(@f8_test,0, 1, 4, 3) - pi/4) < tol);
 
 disp('Test p4, option 3')
 hw_assert( test_p4(hw06_worker.p4()) );
+
+disp('Test p5, option 3')
+hw_assert( test_p4(hw06_worker.p5(10)) );
 
 function ret = f1_test(x)
     ret = x.^2;
